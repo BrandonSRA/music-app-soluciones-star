@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {singers.map((item) => {
-        return <p>{item.name}</p>;
+        return <p key={item.id}>{item.name}</p>;
       })}
     </main>
   );
