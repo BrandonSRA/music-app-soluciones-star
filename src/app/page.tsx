@@ -1,19 +1,8 @@
-interface Singer {
-  id: string;
-  avatar: string;
-  name: string;
-  age: string;
-  gender: string;
-  createdAt: string;
-  updatedAt: string;
-}
+"use client";
+import { useSingersContext } from "./shared";
 
-export default async function Home() {
-  const url = `${process.env.NEXT_PUBLIC_API_URL}/api/singers`;
-  console.log(url);
-  const res = await fetch(url);
-  const data = await res.json();
-  const singers: Singer[] = data;
+export default function Home() {
+  const { singers } = useSingersContext();
 
   console.log(singers);
   return (
