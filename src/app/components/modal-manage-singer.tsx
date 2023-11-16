@@ -37,10 +37,13 @@ export default function ModalManageSinger() {
   });
 
   const isEmptyData = Object.keys(singer).some((key) => {
-    return singer[key as keyof SingerType] === "" || singer[key as keyof SingerType] === 0;
+    return (
+      singer[key as keyof SingerType] === "" ||
+      singer[key as keyof SingerType] === 0
+    );
   });
 
-  console.log(isEmptyData)
+  console.log(isEmptyData);
 
   useEffect(() => {
     if (selectedSinger) {
@@ -124,7 +127,11 @@ export default function ModalManageSinger() {
             </Button>
             <Button
               variant="contained"
-              disabled={!isEnableToEdit || isEmptyData || loadingActionSinger ? true : false}
+              disabled={
+                !isEnableToEdit || isEmptyData || loadingActionSinger
+                  ? true
+                  : false
+              }
               color="success"
               onClick={() => {
                 typeCurrentModal === "create"
@@ -154,15 +161,6 @@ const Backdrop = React.forwardRef<
     />
   );
 });
-
-const blue = {
-  200: "#99CCFF",
-  300: "#66B2FF",
-  400: "#3399FF",
-  500: "#007FFF",
-  600: "#0072E5",
-  700: "#0066CC",
-};
 
 const grey = {
   50: "#F3F6F9",
