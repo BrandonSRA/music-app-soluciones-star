@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, ReactNode, useContext, useMemo } from "react";
+import React, { createContext, ReactNode, useContext } from "react";
 import { useSingers, UseSingersType } from "../hooks";
 
 export interface SingersContextType extends UseSingersType {}

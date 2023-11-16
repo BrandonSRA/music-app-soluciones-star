@@ -7,15 +7,19 @@
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "npx prisma db push"
+    "db:push": "npx prisma db push",
+    "start:prisma": "npx prisma studio"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/lab": "^5.0.0-alpha.153",
     "@mui/material": "^5.14.18",
     "@prisma/client": "^5.6.0",
     "next": "14.0.2",
     "react": "^18",
+    "react-content-loader": "^6.2.1",
     "react-dom": "^18"
   },
   "devDependencies": {

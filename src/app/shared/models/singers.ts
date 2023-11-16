@@ -1,9 +1,9 @@
 export interface SingerType {
-  id: string;
-  avatar: string;
+  id?: string;
   name: string;
-  age: string;
+  avatar?: string;
+  age: number;
   gender: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
