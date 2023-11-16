@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { SingerType, useSingersContext } from "../shared";
 import clsx from "clsx";
 import { styled, Box } from "@mui/system";
 import { Modal as BaseModal } from "@mui/base/Modal";
-import { SingerType, useSingersContext } from "../shared";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
 const initialState: SingerType = {
   name: "",
   gender: "",

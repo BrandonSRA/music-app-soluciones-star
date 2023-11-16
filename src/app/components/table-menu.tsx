@@ -1,10 +1,10 @@
 "use client";
 
+import React from "react";
+import { SingerType, useSingersContext } from "../shared";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
-import React from "react";
-import { SingerType, useSingersContext } from "../shared";
 import { ThemeProvider, createTheme } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";

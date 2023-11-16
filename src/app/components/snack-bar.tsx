@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import { useSingersContext } from "../shared";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { useSingersContext } from "../shared";
+
 
 export const SnackBar = () => {
   const { snackBar } = useSingersContext();
@@ -14,7 +15,7 @@ export const SnackBar = () => {
   const action = (
     <React.Fragment>
       <Button color="secondary" size="small" onClick={handleCloseSnackBar}>
-        UNDO
+        Cerrar
       </Button>
       <IconButton
         size="small"
