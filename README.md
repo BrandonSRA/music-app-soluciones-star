@@ -35,15 +35,6 @@ Define los siguientes endpoints en el controlador:
 - Actualizar los datos de un cantante existente.
 - Eliminar un cantante por su ID.
 
-## Desarrollo del Backend:
-
-Se creó un CRUD con Next.js en conjunto con una base de datos a través de Prisma. Para hacer la consulta a la base de datos PostgreSQL, se creó un modelo de datos con los campos requeridos para la prueba. También se creó un controlador para la entidad "Cantantes". Los endpoints definidos en el controlador son:
-
-- **GET:** Para listar todos los cantantes.
-- **PUT:** Para obtener un cantante por su ID.
-- **POST:** Para crear un nuevo cantante.
-- **DELETE:** Para eliminar un cantante por su ID.
-
 ## Frontend:
 
 Crea un proyecto con React.js para el frontend.
@@ -51,15 +42,16 @@ Implementa una página que muestre una tabla con los cantantes obtenidos desde l
 Asegúrate de que la tabla muestre los campos adecuados de cada cantante (por ejemplo: ID, nombre, edad, género musical).
 Agrega funcionalidades para crear, actualizar y eliminar cantantes utilizando peticiones a la API.
 
-## Estructura del Frontend:
-
-Se creó un proyecto con React.js para el frontend. Se implementó una página que muestra una tabla con los cantantes obtenidos desde la API. La tabla presenta los campos adecuados de cada cantante (ID, nombre, edad, género musical). Además, se agregaron funcionalidades para crear, actualizar y eliminar cantantes utilizando peticiones a la API.
-
----
-
 # Desarrollo de la Prueba
 
 ## Backend:
+
+Se creó un CRUD con Next.js en conjunto con una base de datos a través de Prisma. Para hacer la consulta a la base de datos PostgreSQL, se creó un modelo de datos con los campos requeridos para la prueba. También se creó un controlador para la entidad "Cantantes". Los endpoints definidos en el controlador son:
+
+- **GET:** Para listar todos los cantantes.
+- **PUT:** Para obtener un cantante por su ID.
+- **POST:** Para crear un nuevo cantante.
+- **DELETE:** Para eliminar un cantante por su ID.
 
 ### configuración de la base de datos:
 
@@ -165,27 +157,25 @@ export async function DELETE({ params }) {
 }
 ```
 
-para probar los endpoints se puede utilizar el siguiente comando en la terminal:
+# Frontend:
 
-`bash npx prisma studio`
+## Estructura del Frontend:
 
-## Frontend:
+Se creó un proyecto con React.js para el frontend. Se implementó una página que muestra una tabla con los cantantes obtenidos desde la API. La tabla presenta los campos adecuados de cada cantante (ID, nombre, edad, género musical). Además, se agregaron funcionalidades para crear, actualizar y eliminar cantantes utilizando peticiones a la API.
+
+---
 
 ### Configuración del proyecto:
 
-Para la configuración del proyecto se utilizó el comando `npx create-next-app` para crear un proyecto con Next.js. Se creó un archivo `.env.local` en la raíz del proyecto con la siguiente configuración:
-
-```Typescript
-NEXT_PUBLIC_API_URL=http://localhost:3000
-```
+Para la configuración del proyecto se utilizó el comando `npx create-next-app` para crear un proyecto con Next.js.
 
 ### Creación de la tabla:
 
-para la creación de la tabla se creo un hook personalizado en el archivo `/hooks/useSingers.js` para hacer el llamado a la API. Este hook realiza diferentes llamados a la API dependiendo del método que se le pase como parámetro.se hace el llamado con el método fetch() de JavaScript.
+para la creación de la tabla se creo un hook personalizado en el archivo `/hooks/use-singers.ts` para hacer el llamado a la API. Este hook realiza diferentes llamados a la API dependiendo del método que se le pase como parámetro.se hace el llamado con el método fetch() de JavaScript.
 
 ## creación del contexto:
 
-para la creación del contexto se creo una carpeta providers en la raíz del proyecto. Dentro de esta carpeta se creó un archivo `SingersProvider.jx` con la siguiente configuración:
+para la creación del contexto se creo una carpeta providers en la raíz del proyecto. Dentro de esta carpeta se creó un archivo `singers-provider.tsx` con la siguiente configuración:
 
 ```Typescript
 export interface SingersContextType extends UseSingersType {}
